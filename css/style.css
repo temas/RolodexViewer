@@ -6,8 +6,9 @@ li {
   margin:2px;
   padding:4px;
   width:200px;
-  height:230px;
+  height:120px;
   /*-webkit-backface-visibility:hidden;*/
+  -webkit-transform-origin:0% 100%;
 }
 
 li div {
