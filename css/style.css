@@ -1,7 +1,16 @@
+ul {
+  -webkit-perspective-origin-x:50%;
+  -webkit-perspective-origin-y:10%;
+  -webkit-perspective:500;
+  height:220px;
+  width:300px;
+  padding:20px;
+}
+
 li {
   display:block;
-  left:100px;
-  top:100px;
+  left:50px;
+  top:0px;
   position:absolute;
   margin:2px;
   padding:4px;
@@ -10,7 +19,7 @@ li {
   -webkit-transform-origin:0% 100%;
 }
 
-li div {
+.namecard {
   position:relative;
   top:0;
   left:0;
@@ -20,4 +29,31 @@ li div {
   text-align:center;
   background-color:green;
   color:white;
+}
+
+.namecard:hover {
+  background-color:blue;
+}
+
+span {
+  display:inline-block;
+  width:80px;
+  border:1px solid gray;
+  text-align:center;
+}
+
+img {
+  height:48px;
+  width:48px;
+  position:absolute;
+  left:10px;
+  top:10px;
+}
+
+.name {
+  position:absolute;
+  left:60px;
+  top:10px;
+  width:130px;
+  text-align:left;
 }
