@@ -1,13 +1,22 @@
-ul li {
+li {
   display:block;
   left:100px;
   top:100px;
   position:absolute;
   margin:2px;
-  border:2px solid black;
   padding:4px;
   width:200px;
+  height:230px;
+  /*-webkit-backface-visibility:hidden;*/
+}
+
+li div {
+  position:relative;
+  top:0;
+  left:0;
+  width:200px;
   height:100px;
+  border:2px solid black;
   text-align:center;
   background-color:green;
   color:white;
