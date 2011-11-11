@@ -3,15 +3,27 @@ $(function() {
     var cur = 0;
     // Initial positions
     $("li").each(function(idx) {
-        $(this).css("-webkit-transform", "rotateX(" + cur + "deg)");
-        $(this).data("startRotate", cur);
-        console.log("-webkit-transform:rotateX(" + cur + "deg) translateY(50px)");
+        $(this).css("-webkit-transform", "rotateY(10deg) rotateX(" + cur + "deg)");
+        $(this).data("curRotate", cur);
         cur += (360 / 10);
     });
     // Now spin that shit
-    $("li").animate({top:100}, {duration:2000, step:function(now, fx) {
-        console.log((360 * fx.pos + $(fx.elem).data("startRotate")) % 360);
-        //translate3d(0px, 50px, 50px) 
-        $(fx.elem).css("-webkit-transform", "rotateY(45deg) rotateX(" + (360 * fx.pos + $(fx.elem).data("startRotate")) % 360 + "deg)");// rotateZ(45deg)");
-    }});
+    $(document).mousedown(function() {
+      $("li").animate({top:100}, {duration:200, step:function(now, fx) {
+          var cur = ((360/10) * fx.pos + $(fx.elem).data("curRotate")) % 360;
+          $(fx.elem).css("-webkit-transform", "rotateY(10deg) rotateX(" + cur + "deg)");
+          if (fx.pos >= 1.0) $(fx.elem).data("curRotate", cur);
+          cur = parseInt(cur);
+          if (cur <= 90) {
+              $(fx.elem).css("z-index", 90 - cur);
+          } else if (cur > 90 && cur <= 180) {
+              $(fx.elem).css("z-index", cur - 90);
+          } else if (cur > 180 && cur <= 270) {
+              $(fx.elem).css("z-index", cur);
+          } else {
+              $(fx.elem).css("z-index", 180 + 360 - cur);
+          }
+
+      }});
+    });
 });

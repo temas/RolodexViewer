@@ -7,7 +7,6 @@ li {
   padding:4px;
   width:200px;
   height:120px;
-  /*-webkit-backface-visibility:hidden;*/
   -webkit-transform-origin:0% 100%;
 }
 
