@@ -1,11 +1,19 @@
 {
   "author": "Thomas \"temas\" Muldowney <temas@singly.com>",
-  "name": "RolodexViewer",
+  "name": "rolodexviewer",
   "description": "View your contacts on rolodex style cards.",
   "version": "0.1.0",
   "repository": {
-    "type": "git",
-    "url": "git://github.com/temas/RolodexViewer.git"
+    "type": "app",
+    "title": "RolodexViewer",
+    "status": "development",
+    "static": true,
+    "handle": "rolodexview",
+    "uses":{
+        "types":["contacts"],
+        "services":["twitter", "facebook"]
+    },
+    "update":true
   },
   "engines": {
     "node": "~0.4.10"
