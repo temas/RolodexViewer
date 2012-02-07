@@ -2,7 +2,7 @@
   "author": "Thomas \"temas\" Muldowney <temas@singly.com>",
   "name": "rolodexviewer",
   "description": "View your contacts on rolodex style cards.",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "repository": {
     "type": "app",
     "title": "RolodexViewer",
